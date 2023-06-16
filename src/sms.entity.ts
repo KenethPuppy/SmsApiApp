@@ -1,13 +1,13 @@
 import { model, Schema, Types } from 'mongoose'
 
 export interface ISms {
-    phone: number;
+    phone: string;
     phoneFrom: string;
     text: string;
 }
 
 export const SmsSchema = new Schema<ISms>({
-    phone: Number,
+    phone: String,
     phoneFrom: String,
     text: String,
 })

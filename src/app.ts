@@ -81,7 +81,7 @@ interface GetServicesRequest {
 }
 
 interface SaveSmsRequest {
-  phone: number;
+  phone: string;
   phone_from: string;
   text: string;
 }
