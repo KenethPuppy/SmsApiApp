@@ -97,7 +97,7 @@ const start = async () => {
   await mongoose.connect('mongodb://127.0.0.1:27017/smsApiTest')
   const adminOptions = {
     // We pass Category to `resources`
-    resources: [NumberPhoneModel],
+    resources: [NumberPhoneModel, SmsModel],
     locale: { 
       language: 'ru', // default language of application (also fallback)
       availableLanguages: Object.keys(AdminJSLocales), 
