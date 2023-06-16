@@ -118,7 +118,8 @@ const start = async () => {
     if (!phone || !phone_from || !text) {
       return res.status(400).json({ error: 'Необходимо заполнить все поля' });
     }
-    saveSms({phone, phone_from, text})
+    const phoneFrom = phone_from;
+    saveSms({phone, phoneFrom, text})
     res.json({ message: 'Сообщение успешно Сохранено' });
   });
 
